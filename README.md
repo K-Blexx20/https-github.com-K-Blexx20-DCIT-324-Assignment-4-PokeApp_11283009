@@ -82,39 +82,3 @@ for an Android emulator / `i` for an iOS simulator.
 
 You'll need an internet connection on your phone/emulator for the app to
 load any Pokemon — it fetches everything live from PokeAPI.
-
-## Push to GitHub and submit
-
-1. Create a new empty repository on GitHub (don't initialize it with a
-   README).
-2. From inside this project folder:
-   ```bash
-   git init
-   git add .
-   git commit -m "DCIT 324 Assignment 4: Pokedex app with navigation and live data"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/<your-repo>.git
-   git push -u origin main
-   ```
-3. On GitHub, click the green **Code** button → **Download ZIP**.
-4. Submit the downloaded ZIP file on Sakai under this assignment.
-
-## Matching the reference design
-
-I couldn't open the Figma community file's layers directly, so the
-palette here (red accent `#E63946`, flat per-type colors, white cards) is
-an original flat design — not copied from the actual kit. Before
-submitting, open the Figma file, compare structure and colors against
-`src/theme/colors.js` and the screen `StyleSheet`s, and adjust as needed.
-The brief explicitly says you don't need to copy every illustration, just
-keep the same simple, flat-color feel.
-
-## Customizing further
-
-- Change how many Pokemon load at once by editing the `limit` passed to
-  `fetchPokemonList` in `HomeScreen.js`.
-- Add a search bar to Home by filtering the `pokemon` state array — no
-  new fetch needed since the whole list is already in memory.
-- If you want favourites to persist across screens (e.g. a "Favourites"
-  tab), lift the favourite state out of `PokemonCard` into a shared
-  Context, the same pattern used for the cart in the Assignment 3 project.
